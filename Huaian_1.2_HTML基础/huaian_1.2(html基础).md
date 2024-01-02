@@ -76,3 +76,39 @@ a 1.超链接，href属性="需要跳转的路径" 可以是本地的也可以�
     1.button 一个普通的按钮
     2.reset  重置按钮
     3.submit 提交当前表单 必须是在form标签中
+
+  12.select 下拉选择框
+    <select name="city" id="">
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="ha">淮安</option>
+      </select>
+
+  13.textarea 多行文本域 输入多行文本内容
+    cols:列
+    row:行
+
+  标签中的属性
+    1.name  标签的名字
+    2.id    标签的唯一标识
+    3.value 输入框的值
+    4.placeholder 输入框的提示文本
+    5.readeronly  输入框只读 鼠标可以选中不能修改
+    6.disabled  无效的 鼠标不能选中也不能修改
+    7.size  输入框输入的字段尺寸大小
+
+HTML中各种标签可以被分为两类 
+  1.块级元素:独立成行,拥有边框 大小 边距 背景....
+    例如:h1-h6\p\ul\table.....
+
+  2.内联元素:不会单独成行, 不能设置边框 大小 边距 背景....
+    例如:td\a\img....
+
+  一般情况在与CSS配合使用时,可以发生改变
+
+  无语义标签:标签的本身没有任何含义,它只是一个容器,用于存放别的其他的标签
+
+  1.div:块级元素 包装其他标签 往往用于与css配合,实现页面的布局
+
+  2.span:内联元素 包装文本 将文本封装成一个整体
+
