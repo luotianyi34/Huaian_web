@@ -1,0 +1,77 @@
+<!-- 告诉别人我写的文本类型是html -->
+<!DOCTYPE html>
+<!-- html标记 -->
+<html lang="en">
+  <!-- 网页的一些基本设置和网页的基本属性 -->
+  <head>
+    <!-- 设置网页的字符编码 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 设置网页的标题 -->
+    <title>你好</title>
+  </head>
+  <!-- 网页的主体 显示在页面中的内容 -->
+  <body>
+    <!-- 可以直接编写文本也可以编写其他的标签 -->
+    hello!
+    <input type="text" />
+    <hr />
+    <h1 id="top">标题</h1>
+    <h2>标题</h2>
+    <h3>标题</h3>
+    <h4>标题</h4>
+    <h5>标题</h5>
+    <hr>
+    <p>这是一段文本</p>
+    <hr>
+    <font face="verdana">AAA</font>
+    <font size="10" color="red" face="宋体">BBB</font>
+    <hr>
+    <img src="..\img\a.jpg" alt="" width="200px" height="200px">
+    <br>
+    <img src="..\img\a.jpg" alt="" width="200px" height="200px">
+    <a href="http://www.baidu.com">点击跳转百度</a>
+    <a href="#top">点击跳转到标签位置！</a>
+    <dl>
+      <dt>网站导航</dt>
+      <dd><a href="http://www.baidu.com">点击跳转百度！</a></dd>
+      <dd><a href="http://www.baidu.com">点击跳转百度！</a></dd>
+      <dd><a href="http://www.baidu.com">点击跳转百度！</a></dd>
+    </dl>
+    <table border="1px" width="300px" height="50px" cellspacing="0px" cellpadding="0px" align="center">
+      <tr>
+        <th>班级</th>
+        <th>姓名</th>
+        <th>学号</th>
+      </tr>
+
+      <tr>
+        <td>第一行第一列</td>
+        <td colspan="2" align="center">合并列</td>
+        <!-- <td>第一行第三列</td> -->
+      </tr>
+
+      <tr>
+        <td>第二行第一列</td>
+        <td rowspan="2"><img src="..\img\a.jpg" alt="合并行" width="100px" height="100px"></td>
+        <td>第二行第三列</td>
+      </tr>
+
+      <tr>
+        <td>第三行第一列</td>
+        <!-- <td>第三行第二列</td> -->
+        <td>第三行第三列</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th>表格头</th>
+      </tr>
+      <tr>
+        <td>行与列</td>
+      </tr>
+    </table>
+  </body>
+</html>
