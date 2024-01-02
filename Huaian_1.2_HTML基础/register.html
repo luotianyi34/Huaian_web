@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册界面</title>
+  </head>
+  <body>
+    <form action="./login.html">
+      <table border="1px" align="center" cellspacing="0px">
+        <tr>
+          <td colspan="2" align="center"><h2>欢迎注册</h2></td>
+        </tr>
+        <tr>
+          <td align="center">用户名</td>
+          <td width="400px" align="center">
+            <input
+              type="text"
+              placeholder="请输入用户名.... "
+              name="username"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">密码</td>
+          <td width="400px" align="center">
+            <input
+              type="password"
+              placeholder="请输入密码...."
+              name="password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">邮箱</td>
+          <td width="400px" align="center">
+            <input
+              type="email"
+              placeholder="请输入邮箱账号...."
+              size="30"
+              name="email"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="center">性别</td>
+          <td width="400px" align="center">
+            <input type="radio" name="sex" value="man" />男
+            <input type="radio" name="sex" value="woman" />女
+          </td>
+        </tr>
+        <tr>
+          <td align="center">居住城市</td>
+          <td align="center">
+            <select name="city" id="">
+              <option value="">--请选择--</option>
+              <option value="bj">北京</option>
+              <option value="sh">上海</option>
+              <option value="ha">淮安</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">想要学习的课程</td>
+          <td align="center">
+            <input type="checkbox" name="lesson" value="java" />JAVA
+            <input type="checkbox" name="lesson" value="javascript" />JAVA
+            Script <input type="checkbox" name="lesson" value="vue" />vue
+            <input
+              type="checkbox"
+              name="lesson"
+              value="springboots"
+            />Springboots
+          </td>
+        </tr>
+        <tr>
+          <td align="center">头像</td>
+          <td align="center">
+            <input type="file" name="value" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button type="reset">重置</button>
+            <button type="submit">注册</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
