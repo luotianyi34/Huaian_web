@@ -57,3 +57,22 @@ a 1.超链接，href属性="需要跳转的路径" 可以是本地的也可以�
   合并行 rowspan=?
   合并列 colspan=?
   
+  10.表单标签
+  <form></form>
+    1.input标签 根据type属性值的不同 所以表示的输入框也不一样
+      1.text 文本输入框
+      2.password 密码输入框
+      3.checkbox 复选输入框
+      4.radio    单选输入框 标签的name属性值要一致
+      5.image    图片显示 类似于img标签 多了点击效果
+      6.file     文件上传
+      7.hideen   隐藏域
+      8.button   普通按钮
+      9.reset    重置按钮,重置当前表单中填写的内容 必须是在form标签中
+      10.submit  发送请求到form表单的action的地址上 提交当前表单
+
+  11.button 按钮标签
+    type属性不一样 所表示的按钮的功能也不同
+    1.button 一个普通的按钮
+    2.reset  重置按钮
+    3.submit 提交当前表单 必须是在form标签中

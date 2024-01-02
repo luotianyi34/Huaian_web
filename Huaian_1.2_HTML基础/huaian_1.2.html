@@ -14,7 +14,7 @@
   <!-- 网页的主体 显示在页面中的内容 -->
   <body>
     <!-- 可以直接编写文本也可以编写其他的标签 -->
-    hello!
+    <!-- hello!
     <input type="text" />
     <hr />
     <h1 id="top">标题</h1>
@@ -49,8 +49,8 @@
       <tr>
         <td>第一行第一列</td>
         <td colspan="2" align="center">合并列</td>
-        <!-- <td>第一行第三列</td> -->
-      </tr>
+        <td>第一行第三列</td> -->
+      <!-- </tr>
 
       <tr>
         <td>第二行第一列</td>
@@ -60,8 +60,8 @@
 
       <tr>
         <td>第三行第一列</td>
-        <!-- <td>第三行第二列</td> -->
-        <td>第三行第三列</td>
+         <td>第三行第二列</td> -->
+        <!-- <td>第三行第三列</td>
       </tr>
     </table>
 
@@ -72,6 +72,47 @@
       <tr>
         <td>行与列</td>
       </tr>
-    </table>
+    </table> -->
+    <form action="http://www.baidu.com" method="get">
+      1.文本输入框:
+      <input type="text" name="username" id="inp1" value="">
+      <br>
+      2.密码输入框:
+      <input type="password" name="password"id="inp2"value="">
+      <br>
+      3.复选框:
+      <input type="checkbox"name="x1"id="x1"value="x1">选项1
+      <input type="checkbox"name="x2"id="x2"value="x2">选项2
+      <input type="checkbox"name="x3"id="x3"value="x3">选项3
+      <br>
+      4.单选输入框:
+      <input type="radio" name="sex"value="man">男
+      <input type="radio" name="sex"value="woman">女
+      <input type="radio" name="sex"value="ot">其他
+      <br>
+      5.图片:
+      <input type="image" src="../img/a.jpg" width="100px" height="100px">
+      <br>
+      <img src="../img/a.jpg" alt="" width="100px" height="100px"value="img/a.jpg"name="img">
+      <br>
+      6.文件上传:
+      <input type="file" name="file">
+      <br>
+      7.隐藏域
+      <input type="hidden" value="nihao~"name="hide~">
+      <br>
+      <input type="button" value="普通按钮">
+      <button type="button">按钮标签</button>
+      <br>
+      <input type="reset" value="重置">
+      <button type="reset">重置按钮标签</button>
+      <br>
+      <input type="submit" value="提交当前表单">
+      <button type="submit">提交按钮标签</button>
+      <br>
+      颜色选择器<input type="color">
+      <br>
+      
+    </form>
   </body>
 </html>
