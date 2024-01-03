@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+<link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+    <form action="">
+        <div class="main">
+            <div class="title">欢迎注册</div>
+            <div class="name">用户名:
+                <input type="text" name="username" id="username" placeholder="请输入用户名...">
+            </div>
+            <div class="pwd">密码:
+                <input type="password" name="password" id="password" placeholder="请输入密码...">
+            </div>
+            <div class="tel">手机:
+                <input type="tel" name="tel" placeholder="请输入手机号...">
+            </div>
+            <div class="email">邮箱地址:
+                <input type="email" name="email" placeholder="请输入邮箱地址...">
+            </div>
+            <div class="date">出生日期:
+                <input type="date" name="date">
+            </div>
+            <div class="sex"><span>性别:</span>
+                <input type="radio" name="sex" value="man">男
+                <input type="radio" name="sex" value="wowan">女
+            </div>
+            <div class="city">居住地:
+                <select name="city" id="">
+                    <option value="">--请选择--</option>
+                    <option value="bj">北京</option>
+                    <option value="sh">上海</option>
+                    <option value="ha">淮安</option>
+                  </select>
+            </div>
+            <div class="age">年龄:
+                <input type="range" value="1" id="age" min="1" max="100" step="1" onchange="document.getElementById('show').innerHTML=value">
+                <span id="show">1</span>岁
+            </div>
+            <div class="reg">
+                <button class="reg">注册</button>
+            </div>
+            
+            
+        </div>
+    </form>
+</body>
+</html>
