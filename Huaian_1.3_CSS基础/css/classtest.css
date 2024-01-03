@@ -1,0 +1,50 @@
+body{
+    /* background-image: url(../img/a.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed; */
+    background: url(../img/a.jpg) no-repeat fixed right top;
+}
+div.background{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    opacity: 0.5;
+    text-align: center;
+    color: red;
+    /* 使用 opacity 属性为元素的背景添加透明度时，其所有子元素都继承相同的透明度。这可能会使完全透明的元素内的文本难以阅读。 */
+}
+div.background2{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    background-color: rgba(139, 159, 40, 0.3);
+    text-align: center;
+    color: red;
+
+}
+div.biankuang{
+    border-left: 10px solid black;
+}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+div.biankuang2{
+    border-style: dashed;
+    border-width: 5px 10px;
+    border-color: red green blue yellow; /* 上红、右绿、下蓝、左黄 */
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    width: 300px;
+    margin: auto;
+}
