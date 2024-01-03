@@ -1,3 +1,7 @@
+* {
+    margin: 3px;
+    padding: 0;
+  }
 body{
     /* background-image: url(../img/a.jpg);
     background-repeat: no-repeat;
@@ -47,4 +51,29 @@ div.biankuang2{
     border-left-style: solid;
     width: 300px;
     margin: auto;
+}
+div.biankuang3{
+    margin: auto;
+    border: 5px solid black;
+    text-align: center;
+    width: 50%;
+    padding: 10px 20px;
+}
+p.p1{
+    margin: 50px;
+    border: 1px solid black;
+    outline: 1px solid red;
+    outline-offset: 25px;
+    text-decoration: line-through;
+    padding: 3px;
+}
+p.UP{
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+p.low{
+    margin: auto;
+    text-align: center;
+    text-transform: lowercase;
 }
