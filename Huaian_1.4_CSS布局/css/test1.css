@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+   text-decoration: none;
+}
+.head{
+    width: 97%;
+    height: 30px;
+    margin: auto 20px;
+    background-color: rgb(246,246,246);
+}
+.head .left{
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+.head .right{
+    float: right;
+    margin-right: 30px;
+}
+.head .right ul{
+    list-style: none;
+}
+.head .right ul li {
+    padding-left: 30px;
+    float: right;
+    text-align: center;
+    margin-top: 5px;
+}
+.cont .top{
+    height: 90px;
+    width: 97%;
+    background-color: blue;
+    margin: auto 20px;
+}
+.cont .top1{
+    height: 60px;
+    width: 97%;
+    background-color: rgb(230,67,70);
+    margin: 10px 20px 0 20px;
+
+}
+.foot{
+    height: 540px;
+    width: 97%;
+    background-color: yellow;
+    margin: 0px 20px 0 20px;
+}
+.foot .cont1{
+    height:540px;
+    width: 20%;
+    float: left;
+}
+.foot .cont2{
+    height:540px;
+    width: 60%;
+    float: left;
+    background-color: green;
+}
+.foot .cont3{
+    height:100%;
+    width: 20%;
+    float: left;
+}
+.foot .cont3_1{
+    height:50%;
+    background-color: red;
+}
+.foot .cont3 .cont3_2{
+    height:40%;
+    background-color: yellow;
+}
+.foot .cont3 .cont3_3{
+    height:10%;
+    background-color: orange;
+}
+
