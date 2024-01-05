@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        /* div{
             width: 200px;
             height: 200px;
         }
@@ -20,6 +20,20 @@
         .d3{
             background-color: burlywood;
             float: right;
+        } */
+        .container{
+            /* 弹性盒子 */
+            display: flex;
+            width: 100%;
+            height: 250px;
+            background-color: aqua;
+            justify-content:space-evenly;
+
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
         }
     </style>
 </head>
@@ -34,8 +48,14 @@
         2.内联元素
         3.内联块级元素
     -->
-    <div class="d1">一个div1</div>
+    <!-- <div class="d1">一个div1</div>
     <div class="d2">一个div2</div>
-    <div class="d3">一个div3</div>
+    <div class="d3">一个div3</div> -->
+    <div class="container">
+        <div class="item">flex item1</div>
+        <div class="item">flex item2</div>
+        <div class="item">flex item3</div>
+        <div class="item">flex item4</div>
+    </div>
 </body>
 </html>

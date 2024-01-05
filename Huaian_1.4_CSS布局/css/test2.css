@@ -54,7 +54,7 @@ li{
     display: inline-block;
     text-align: center;
     line-height: 30px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     border-radius: 8px;
     font-size: 13px;
     letter-spacing: 3px;
