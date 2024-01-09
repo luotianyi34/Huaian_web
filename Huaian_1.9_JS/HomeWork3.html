@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>二级联动</title>
+    <link rel="stylesheet" href="./css/HomeWork3.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="top">
+        <div class="d1">
+          <p>请选择宠物类型:</p>
+        </div>
+        <select name="" id="choice">
+          <option value="">请选择..</option>
+          <option value="cat">猫</option>
+          <option value="dog">狗</option>
+          <option value="mouse">鼠</option>
+        </select>
+      </div>
+      <div class="down">
+        <div class="d1">
+          <p>请查看宠物品种:</p>
+        </div>
+        <select name="" id="type">
+          <option value=""></option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+    var select = document.getElementById("choice")
+    select.onclick=function(){
+        changeCity();
+    }
+    console.log(select);
+  function changeCity() {
+    var choiceSelect = document.getElementById("choice");
+    var typeSelect = document.getElementById("type");
+    var choiceValue = choiceSelect.value;
+
+    // 清空宠物下拉框
+    typeSelect.innerHTML = "";
+
+    // 根据选择的宠物，动态生成对应的种类选项
+    if (choiceValue == "cat") {
+      typeSelect.innerHTML += "<option value='1'>第一种猫</option>";
+      typeSelect.innerHTML += "<option value='2'>第二种猫</option>";
+      typeSelect.innerHTML += "<option value='3'>第三种猫</option>";
+    } else if (choiceValue == "dog") {
+      typeSelect.innerHTML += "<option value='4'>第一种狗</option>";
+      typeSelect.innerHTML += "<option value='5'>第二种狗</option>";
+      typeSelect.innerHTML += "<option value='6'>第三种狗</option>";
+    } else if (choiceValue == "mouse") {
+      typeSelect.innerHTML += "<option value='7'>第一种鼠</option>";
+      typeSelect.innerHTML += "<option value='8'>第二种鼠</option>";
+      typeSelect.innerHTML += "<option value='9'>第三种鼠</option>";
+    }
+  }
+
+</script>
