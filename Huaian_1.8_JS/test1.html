@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加减乘除</title>
+</head>
+<body>
+    <input type="number" id="p1" value="">
+    <br>
+    <input type="number" id="p2" value="">
+    <hr>
+    <button onclick="plus()">+</button>
+    <button onclick="min()">-</button>
+    <button onclick="chen()">*</button>
+    <button onclick="chu()">/</button>
+</body>
+</html>
+<script>
+    function plus(){
+        var a = parseInt(document.getElementById("p1").value);
+        var b = parseInt(document.getElementById("p2").value);
+        console.log(a+b);
+    }
+    function min(){
+        var a = parseInt(document.getElementById("p1").value);
+        var b = parseInt(document.getElementById("p2").value);
+        console.log(a-b);
+    }
+    function chen(){
+        var a = parseInt(document.getElementById("p1").value);
+        var b = parseInt(document.getElementById("p2").value);
+        console.log(a*b);
+    }
+    function chu(){
+        var a = parseInt(document.getElementById("p1").value);
+        var b = parseInt(document.getElementById("p2").value);
+        if(b==0){
+            console.log("除数不为0!");
+        }else{
+            console.log(a/b);
+        }
+    }
+</script>

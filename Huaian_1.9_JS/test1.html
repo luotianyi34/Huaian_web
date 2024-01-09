@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>高亮</title>
+    <style>
+        tr{
+            transition: background-color 1.5s;
+        }
+    </style>
+  </head>
+  <body>
+    <table
+      border="1px"
+      width="750px"
+      height="400px"
+      align="center"
+      cellpadding="0px"
+      cellspacing="0px"
+      bgcolor="white"
+    >
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    var trs = document.getElementsByTagName("tr");
+    console.log(trs);
+    for(var i =0;i<trs.length;i++){    
+        trs[i].onmousemove=function(){
+            this.style="background-color:aqua;"
+        }
+        trs[i].onmouseleave=function(){
+            this.style="background-color:#fff;"
+        }
+    }
+   
+  </script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图</title>
+    <link rel="stylesheet" href="./css/test3.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="list">
+        <li class="item active">0</li>
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+      </ul>
+      <ul class="pointList">
+        <li class="point active" value="0"></li>
+        <li class="point" value="1"></li>
+        <li class="point" value="2"></li>
+        <li class="point" value="3"></li>
+        <li class="point" value="4"></li>
+      </ul>
+      <button class="btn" id="leftBtn"><</button>
+      <button class="btn" id="rightBtn">></button>
+    </div>
+  </body>
+</html>
+<script>
+  var items = document.querySelectorAll(".item"); //图片节点
+  var points = document.querySelectorAll(".point"); //点
+  var left = document.getElementById("leftBtn");
+  var right = document.getElementById("rightBtn");
+  var all = document.querySelector(".wrap");
+  var index = 0;
+  var time = 0; //定时器跳转参数初始化
+  
+  //封装一个清除active方法
+  var clearActive = function () {
+    for (i = 0; i < items.length; i++) {
+      items[i].className = "item";
+    }
+    for (j = 0; j < points.length; j++) {
+      points[j].className = "point";
+    }
+  };
+
+  //改变active方法
+  var goIndex = function () {
+    clearActive();
+    items[index].className = "item active";
+    points[index].className = "point active";
+  };
+  //左按钮事件
+  var goLeft = function () {
+    if (index == 0) {
+      index = 4;
+    } else {
+      index--;
+    }
+    goIndex();
+  };
+
+  //右按钮事件
+  var goRight = function () {
+    if (index < 4) {
+      index++;
+    } else {
+      index = 0;
+    }
+    goIndex();
+  };
+
+  //绑定点击事件监听
+  left.onclick= function () {
+    goLeft();
+  };
+
+  right.onclick=function () {
+    goRight();
+  };
+
+  for (i = 0; i < points.length; i++) {
+    points[i].onclick= function () {
+      var pointIndex = this.getAttribute("value");
+      index = pointIndex;
+      goIndex();
+    };
+  }
+  // 计时器轮播效果
+  function play() {
+    time= setInterval("goRight()", 2000);
+    console.log(time);
+  }
+  play();
+  //移入清除计时器
+  all.onmousemove = function () {
+    clearInterval(time);
+  };
+  //移出启动计时器
+  all.onmouseleave = function () {
+    play();
+  };
+</script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <body>
+    <button onclick="fun1('王天润',18)">点我点我</button>
+    <h1 onclick="this.innerHTML = '谢谢!'">点我改变！</h1>
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #0000ff;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+        color: #ffffff;
+      "
+    >
+      把鼠标移到上面
+    </div>
+    请输入英文字符：<input type="text" id="fname" onchange="myFunction()" />
+    <p>当您离开输入字段时，会触发将输入文本转换为大写的函数。</p>
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="
+        background-color: blue;
+        color: #ffffff;
+        width: 90px;
+        height: 20px;
+        padding: 40px;
+        font-size: 12px;
+      "
+    >
+      请点击这里
+    </div>
+    <button onclick="alterP()">点我修改</button>
+    <p id="p">你好世界!</p>
+    <button onclick="alterText()">点击修改</button>
+    <p>你好世界!</p>
+    <div id="main">
+      <p>DOM 是非常有用的。</p>
+      <p>该实例展示了 <b>getElementsByTagName</b> 方法</p>
+    </div>
+  </body>
+</html>
+<script>
+  function fun1(var1, var2) {
+    alert("hello world");
+    alert("接收到了参数为" + var1 + "和" + var2);
+  }
+  function mOver(obj) {
+    obj.innerHTML = "谢谢";
+  }
+  function mOut(obj) {
+    obj.innerHTML = "把鼠标移到上面";
+  }
+  function myFunction() {
+    var x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+  }
+  function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "请释放鼠标按钮";
+  }
+  function mUp(obj) {
+    obj.style.backgroundColor = "green";
+    obj.innerHTML = "请按下鼠标按钮";
+  }
+  function alterP() {
+    //获取到id为p的标签
+    p = document.getElementById("p");
+    //修改值
+    p.innerHTML = "Hello World!";
+  }
+  function alterText() {
+    var main = document.getElementById("main");
+    //此处放回的是数组
+    var p = main.getElementsByTagName("p");
+    //将第二个 p 的值修改为第一个 p 的值
+    p[1].innerHTML = p[0].innerHTML;
+  }
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点赞</title>
+    <style>
+        #imgs{
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+        a img{
+            width: 200px;
+            height: 200px;
+        }
+        .show{
+            width: 450px;
+            height: 300px;
+        }
+        .show img{
+            width: 450px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div><img src="./img/dianzan.png" alt="" onclick="point()" id="imgs"></div> -->
+    <div class="box">
+        <a href="./img/1.png"><img src="./img/1.png" alt=""></a>
+        <a href="./img/2.png"><img src="./img/2.png" alt=""></a>
+        <a href="./img/3.png"><img src="./img/3.png" alt=""></a>
+    </div>
+    <div class="show">
+        <img src="" alt="请点击上方图片查看" id="image">
+    </div>
+</body>
+</html>
+<script>
+    var flag =1;
+    function point(){
+        flag++;
+        var src1 = document.getElementById("imgs");
+        if(flag%2==0){
+            src1.src="./img/dianzan_1.png";
+            console.log(src1)
+        }else{
+            src1.src="./img/dianzan.png";
+            console.log(src1)
+        }
+    }
+
+    var alist = document.getElementsByTagName("a");
+    var image = document.getElementById("image");
+    for(var i =0;i<alist.length;i++){
+        //事件的监听 事件名=匿名函数
+        alist[i].onclick=function(){
+            image.src=this.href;
+            return false;
+        }
+    }
+    
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>换行变色</title>
+    <style>
+        tr{
+            transition: background-color 1.5s;
+        }
+    </style>
+</head>
+<body>
+    <table
+      border="1px"
+      width="750px"
+      height="400px"
+      align="center"
+      cellpadding="0px"
+      cellspacing="0px"
+      bgcolor="white"
+    >
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <div style="position: relative; width: 100%; display: flex;">
+        <div style="margin: 10px auto;">
+            <button id="change">点我变色</button>
+            <button id="unchange">点我取消变色</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+    var change = document.getElementById("change");
+    var unchange = document.getElementById("unchange");
+    change.onclick=function(){
+        var trs = document.getElementsByTagName("tr");
+        for(var i =0;i<trs.length;i++){
+            if(i%2==0){
+                trs[i].style="background-color:grey;"
+            }else{
+                trs[i].style="background-color:aqua;"
+            }
+        }
+    }
+    unchange.onclick=function(){
+        var trs = document.getElementsByTagName("tr");
+        for(var i =0;i<trs.length;i++){
+            trs[i].style="background-color:#fff;"
+        }
+    }
+</script>
+</html>

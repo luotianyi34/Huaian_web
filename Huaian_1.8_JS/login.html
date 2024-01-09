@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录界面</title>
+  </head>
+  <body>
+    <form action="">
+      <table border="1px" align="center" cellspacing="0px">
+        <tr>
+          <td colspan="2" align="center"><h2>欢迎登录</h2></td>
+        </tr>
+        <tr height="50px">
+          <td align="center">用户名</td>
+          <td width="400px" align="center">
+            <input
+              type="text"
+              placeholder="请输入用户名.... "
+              name="username"
+              id="username"
+            />
+          </td>
+        </tr>
+        <tr height="50px">
+          <td align="center">密码</td>
+          <td width="400px" align="center">
+            <input
+              type="password"
+              placeholder="请输入密码...."
+              name="password"
+              id="password"
+            />
+          </td>
+        </tr>
+        <tr height="30px">
+          <td colspan="2" align="center">
+            <button type="reset">重置</button>
+            <button type="button" onclick="login()">登录</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+<script>
+  function login(){
+    var realname = "admin";
+    var password = "admin";
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    console.log(username);
+    console.log(password);
+    if(username==""){
+      alert("用户名不能为空!");
+    }else if(username=="admin"&&password=="admin"){
+      alert("登录成功！")
+    }else{
+      alert("登录失败,请检查用户名账号和密码!")
+    }
+  }
+</script>
