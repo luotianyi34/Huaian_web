@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <script src="./js/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div id="d1">第1个元素</div>
+    <div id="d2">第2个元素</div>
+    <div id="d3">第3个元素</div>
+    <div id="d4"><span class="s1">div中的span</span></div>
+    <input type="text" value="admin" id="ip1" />
+    <hr>
+    <button type="button" id="btn">点击</button>
+  </body>
+</html>
+<script>
+  // $().ready(function(){
+  //     console.log("页面加载完了！");
+  // })
+  $(function () {
+    // console.log("加载！");
+    // var div1 = $("div");
+    // var div2 = $("div span");
+    // console.log($(div1[0]).text());
+    // console.log(div2.text());
+    // console.log($("#ip1").val())
+    $("#btn").click(function(){
+        //事件监听 点击事件
+        console.log($("#ip1").val())
+    })
+  });
+</script>

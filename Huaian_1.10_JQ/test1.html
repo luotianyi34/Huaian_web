@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表行隔行换色 全选全不选</title>
+    <link rel="stylesheet" href="./css/test1.css" />
+    <script src="./js/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <table
+      border="1px"
+      width="750px"
+      align="center"
+      cellpadding="0px"
+      cellspacing="0px"
+      bgcolor="white"
+    >
+      <tr>
+        <th><input type="checkbox" id="all_check"/>全选</th>
+        <th>班级</th>
+        <th>姓名</th>
+        <th>学号</th>
+        <th>操作</th>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>2001</td>
+        <td>张三</td>
+        <td>001</td>
+        <td><button>删除</button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>2002</td>
+        <td>李四</td>
+        <td>002</td>
+        <td><button>删除</button></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>2001</td>
+        <td>王五</td>
+        <td>007</td>
+        <td><button>删除</button></td>
+      </tr>
+    </table>
+    <div class="add">
+      <div>姓名:<input type="text" /></div>
+      <div>班级:<input type="text" /></div>
+      <div>学号:<input type="text" /></div>
+      <button onclick="add()">添加</button>
+    </div>
+  </body>
+</html>
+<script>
+  //简单的染色 单数和双数染不同色
+  function change() {
+    var trs = $("tr");
+    for (var i = 0; i < trs.length; i++) {
+      if (i % 2 == 0) {
+        $(trs[i]).css("background-color", "aqua");
+      } else {
+        $(trs[i]).css("background-color", "white");
+      }
+    }
+  }
+  change(); //初始化染色
+
+  //此方法是增加数据的方法
+  function add() {
+    var inputs = $(".add input");
+    for (var i = 0; i < inputs.length; i++) {
+      if ($(inputs[i]).val() == "") {
+        alert("文本内容不能为空！");
+        return false;
+      }
+    }
+    var text0 = document.createTextNode(inputs[0].value);
+    var text1 = document.createTextNode(inputs[1].value);
+    var text2 = document.createTextNode(inputs[2].value);
+    var table = document.querySelector("tbody");
+    var tr = document.createElement("tr");
+    var td = document.createElement("td");
+    var td0 = document.createElement("td");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    var td3 = document.createElement("td");
+    var checkbox = document.createElement("input");
+    var button = document.createElement("button");
+    var text = document.createTextNode("删除");
+    checkbox.type = "checkbox";
+    button.appendChild(text);
+    td.appendChild(checkbox);
+    td0.appendChild(text0);
+    td1.appendChild(text1);
+    td2.appendChild(text2);
+    table.appendChild(tr);
+    td3.appendChild(button);
+    tr.appendChild(td);
+    tr.appendChild(td0);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    change(); //重新染色
+    ifchecked(); //重新判断是否能被全选
+    checkpoint(); //将新增的数据放入数组中
+    del(); //重新加载删除方法
+  }
+
+  function del() {
+    var dels = document.querySelectorAll("tr td button");
+    for (var i = 0; i < dels.length; i++) {
+      dels[i].onclick = function () {
+        this.parentNode.parentNode.remove();
+        change(); //重新染色
+        ifchecked(); //重新判断是否能被全选
+        checkpoint(); //将减少的数据放入数组中
+      };
+    }
+  }
+  del(); //初始化方法
+
+  var all_check = $("#all_check");
+  all_check.click (function () {
+    if (all_check.prop("checked") == true) {
+      //点击全选后若为checked状态则将底下的checkbox全部置为checked状态
+      var allchecks = $("tr td input");
+      for (var i = 0; i < allchecks.length; i++) {
+        $(allchecks[i]).prop("checked", true);
+      }
+    } else {
+      //点击全选后若不为checked状态则将底下的checkbox全部不置为checked状态
+      var allchecks = $("tr td input");
+      for (var i = 0; i < allchecks.length; i++) {
+        $(allchecks[i]).prop("checked", false);
+      }
+    }
+  });
+
+  //每次点击底下的checkbox都要检查是否全被checked了
+  function checkpoint() {
+    var allchecks = $("tr td input");
+    for (var i = 0; i < allchecks.length; i++) {
+      $(allchecks[i]).click (function () {
+        ifchecked();
+      });
+    }
+  }
+  checkpoint();
+
+  function ifchecked() {
+    var allchecks = $("tr td input");
+    for (var i = 0; i < allchecks.length; i++) {
+      if ($(allchecks[i]).prop("checked") == false) {
+        //遍历所有的td checkbox 若全true 则勾上全选
+        $(all_check).prop("checked",false);
+        return false;
+      } else {
+        $(all_check).prop("checked",true);
+      }
+    }
+  }
+</script>
