@@ -53,5 +53,40 @@ jquery:
         2.10:css()  设置或返回样式属性
 
 节点的操作
-    1.append()  插入节点
-    2.
+    1.append()  在结尾插入节点
+    2.prepend() 在开头插入节点
+    3.empty()   清空节点内容    标签保留
+    4.remove()  删除    标签不存在
+    5.before()  作为目标节点的上一个兄弟节点
+    6.after()   作为目标节点的下一个兄弟节点
+
+
+    1.children()    获取子节点
+    2.find("据选择器")  根据选择器查找
+    3.siblings()    获取所有的兄弟节点
+    4.siblings().eq(1)  获取几个兄弟节点
+    5.parent()  获取父节点
+
+遍历
+    each();
+    语法1:$("选择器").each(function(index,element){
+        具体执行的操作
+    })
+    index:选择器的下标位置
+    element:当前遍历的元素对象  也可以用this来表示
+
+    语法2:$.each(n,function(i,e){
+
+    })
+    n:需要遍历的数据对象
+    i:下标
+    e:当前遍历的元素
+
+动画
+    1.hide()
+    2.show()
+    3.slideDown()
+    4.slideUp()
+    5.fateIn()
+    6.fateOut()
+    7.fateToggle()

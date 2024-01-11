@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://www.example.com/path/to/waifu.css"/>
+</head>
+    <!-- waifu-tips.js 依赖 JQuery 库 -->
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
+    
+    <!-- 实现拖动效果，需引入 JQuery UI -->
+    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
+    
+    <!-- 使用 aotuload.js 引入看板娘 -->
+    <script src="assets/autoload.js?v=1.4.2"></script>
+    
+<body>
+    
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+    
+    <script src="./assets/live2d.js"></script>
+    <script src="./assets/waifu-tips.js"></script>
+    
+    <script type="text/javascript">
+        live2d_settings['modelId'] = 1;
+        live2d_settings['modelTexturesId'] = 87;
+    	initModel("https://www.example.com/path/to/waifu-tips.json")
+    </script>
+</body>
+</html>

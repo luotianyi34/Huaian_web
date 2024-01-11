@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录界面</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <script src="./js/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="top">
+        <p>立即登录</p>
+      </div>
+      <div class="tablogin">
+        <div class="tabs color">密码登录</div>
+        <div class="tabs">手机登录</div>
+        <div class="tabs">邮箱登录</div>
+      </div>
+      <div class="box">
+        <div class="passbox" id="fr">
+          <div class="el-input text" id="text"style="display: block">
+            <input
+              type="text"
+              placeholder="手机号/账号"
+              maxlength="11"
+              value=""
+            />
+          </div>
+          <div class="el-input password" style="display: block">
+            <input
+              type="password"
+              placeholder="密码"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="passbox" id="se">
+          <div class="el-input" style="display: none">
+            <input
+              type="text"
+              autocomplete="off"
+              placeholder="手机号"
+              class=""
+              maxlength="11"
+            />
+          </div>
+          <div class="yanzheng">
+            <div class="yzm el-input" style="display: none">
+              <input type="password" autocomplete="off" placeholder="验证码" />
+            </div>
+            <div class="code el-input" style="display: none">发送验证码</div>
+          </div>
+        </div>
+        <div class="passbox" id="tr">
+            <div class="el-input" style="display: none">
+              <input
+                type="text"
+                autocomplete="off"
+                placeholder="邮箱账号"
+                class=""
+                maxlength="11"
+              />
+            </div>
+            <div class="yanzheng">
+              <div class="yzm el-input" style="display: none">
+                <input type="password" autocomplete="off" placeholder="验证码" />
+              </div>
+              <div class="code el-input" style="display: none">发送验证码</div>
+            </div>
+          </div>
+      </div>
+      <div class="but">
+        <button id="btn">登录</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+   var tabs= $(".tabs");
+   var passbox = $(".passbox");
+   var fr = $("#fr .el-input");
+   var se = $("#se .el-input");
+   var tr = $("#tr .el-input");
+   var all = $(".el-input");
+    var btn = $("#btn");
+   console.log(fr);
+   console.log(se);
+   console.log(tr);
+   console.log(all)
+   tabs.click(function(){
+        tabs.removeClass("color");
+        $(this).addClass("color");
+        if($(this).text()=="密码登录"){
+            all.css("display","none")
+            all.css("z-index","0")
+            fr.css("display","block")
+            fr.css("z-index","1")
+        }else if($(this).text()=="手机登录"){
+            all.css("display","none")
+            all.css("z-index","0")
+            se.css("display","block")
+            se.css("z-index","1")
+        }else{
+            all.css("display","none")
+            all.css("z-index","0")
+            tr.css("display","block")
+            tr.css("z-index","1")
+        }
+   })
+   btn.click(function(){
+    var value1 = $(".text input").val();
+    var value2 = $(".password input").val();
+    if(value1=="admin"&&value2=="admin"){
+        alert("登录成功！正在跳转")
+        window.location.replace("list.html");
+    }else{
+      alert("账号密码输入错误!")
+      window.location.replace("login.html");
+    }
+   })
+</script>
